@@ -21,8 +21,11 @@ extern "C"
     v(1) = v(0) - 1;
   // std::cout << "Here is the vector v:\n" << v << std::endl;
 
-     std::string hello = "Hello from C++";
-     return env->NewStringUTF(hello.c_str());
+
+     std::string hello = "Hello Eigen v(1)=" ;
+     char  out[1024];
+     sprintf(out,"%s%f",hello.c_str(),v(1));
+     return env->NewStringUTF(out);
 
 
   }
